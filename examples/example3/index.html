@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Content with JavaScript and Cat Facts API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <h1 class="page-title">My Favorite Fruits and Cat Facts</h1>
+    </header>
+
+    <section class="content">
+        <p class="description">Fruits are an essential part of a healthy diet. Here are a few of my favorites:</p>
+
+        <ul id="fruit-list" class="fruit-list">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Oranges</li>
+        </ul>
+
+        <button id="addFruitBtn">Add New Fruit</button>
+
+        <!-- Button for Fetching Cat Facts -->
+        <button id="fetchDataBtn">Fetch a Cat Fact</button>
+        <div id="apiData"></div>
+    </section>
+
+    <footer>
+        <p id="contact-info">Contact us at: info@fruitworld.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

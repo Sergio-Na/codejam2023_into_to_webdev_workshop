@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <style>
+      /* Add your CSS styling here */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      ul li {
+        background: #fff;
+        margin: 1rem;
+        padding: 0.5rem;
+      }
+      .completed {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My To-Do List</h1>
+    <form method="post" action="/add">
+      <input type="text" name="item" />
+      <input type="submit" value="Add" />
+    </form>
+    <ul>
+      {% for item in todo_list %}
+      <li class="{{ 'completed' if item['completed'] else '' }}">
+        {{ item['task'] }}
+        <form method="post" action="/delete/{{ loop.index0 }}">
+          <input type="submit" value="Delete" />
+        </form>
+        <form method="post" action="/complete/{{ loop.index0 }}">
+          <input type="submit" value="Complete" />
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
