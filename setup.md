@@ -35,3 +35,7 @@ Once you've created your virtual environment, you can install Python packages sp
 Follow the Flask installation guide linked above for detailed instructions on how to install Flask using pip within your virtual environment.
 
 That's it! You're now ready to get started with web development using VSCode, Python, Flask, and a virtual environment. We look forward to seeing you at the workshop!
+
+## API KEY : '48a90ac42caa09f90dcaeee4096b9e53'
+
+## API LINK : http://api.openweathermap.org/data/2.5/weather?q=
